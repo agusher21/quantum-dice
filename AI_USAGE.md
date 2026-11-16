@@ -15,9 +15,10 @@ and a recent-rolls feed. Quantum Pass category, solo builder. It is the
 human builder's second fest project, after Quantum Tip Jar.
 
 - Repo: https://github.com/agusher21/quantum-dice
-- Live demo: https://quantum-dice.vercel.app
-- Fest page: (to be created by the human at build.qorechain.io)
-- Built in one evening: 14 November 2026.
+- Live demo: https://quantum-dice-three.vercel.app
+- Fest page: https://build.qorechain.io/p/quantum-dice
+- Built 14–15 November 2026 (demo live and first verified on-chain roll
+  15 November ~14:00 WIB).
 
 ## The AI: what it is and how it worked
 
@@ -91,6 +92,12 @@ Verification the AI performed (and can be re-checked):
   from the mock tx hash, "Rolled 5 — you guessed 4" shown, recent-rolls
   entry recorded as simulated. Simulated rolls are excluded from the
   stats and leaderboard by design.
+- First real roll verified on chain: guess **4**, rolled **6** — lost;
+  0.01 QOR + fee from `qor1ntpfg4zpxxkpwzwrh0uwdqqyz36lqnmp8nmpz0`, tx
+  `686A398DEE09322456C7D1C6AED0E34535FE0DD7EB3044E7A334E551B50DBE53`,
+  block 10120067, fee 0.03 QOR; sender balance 99.32 QOR before the roll,
+  99.26 QOR after. The result (6) is the last byte of that transaction
+  hash mod 6, plus 1 — verifiable from the hash alone.
 
 ## What the human did
 
@@ -104,13 +111,15 @@ which the project could not exist:
   24-word phrase, and claimed the faucet himself for the first project.
   The AI never saw, held, or asked for any private key or seed phrase.
 - **Every signature.** The AI cannot sign. The first real roll — the
-  project's first hybrid-signed transaction — is the human's to approve
-  in QoreX. The AI only prepared what to sign.
-- **Deployment and fest submission.** The human imports the repo to
-  Vercel himself (as he did for the first project) and creates the fest
-  project page from his own signed-in session at build.qorechain.io.
-  (The fest form does not save drafts, so the fields in
-  `FEST_FIELDS.md` are filled and submitted in one session.)
+  project's first hybrid-signed transaction — was approved by the human
+  in QoreX on 15 November (~14:00 WIB, guess 4, rolled 6, verified
+  on chain above). The AI only prepared what to sign.
+- **Deployment and fest submission.** The human imported the repo to
+  Vercel himself on 15 November (including the emailed 6-digit identity
+  check) and created the fest project page from his own signed-in
+  session at build.qorechain.io the same day. (The fest form does not
+  save drafts, so the fields in `FEST_FIELDS.md` were filled and
+  submitted in one session.)
 - **Direction and review.** The human directed the build in chat and
   reviews each deploy live on the demo URL before the next step.
 
@@ -120,10 +129,10 @@ which the project could not exist:
   credentials.
 - Never signed a transaction, claimed a faucet, or submitted a form on
   the human's behalf — those are all human taps.
-- Never invented a result: the only roll verified so far is a simulated
-  mock-mode roll, and it is labelled as such. No on-chain roll is
-  claimed in this file — the first real roll is still to be made by the
-  human.
+- Never invented a result: the only roll verified before launch was a
+  simulated mock-mode roll, labelled as such; the first real roll is
+  now verified on chain above (guess 4, rolled 6, tx
+  `686A398D…`).
 
 ## Summary
 
